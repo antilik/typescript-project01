@@ -1,0 +1,10 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "ESNext",
+    "removeComments": true,
+    "sourceMap": true,
+    "outDir": "script",
+    "outFile": "./script/main.js"
+  }
+}
