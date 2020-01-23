@@ -42,11 +42,18 @@ function getNameDefault1(firstName, lastName = 'Иванов') {
 ;
 let nameDefault1 = getNameDefault1('Иван', 'Кузнецов');
 console.log('nameDefault1', nameDefault1);
-let nameDefault2 = getNameDefault1('Вася');
-console.log('nameDefault2', nameDefault2);
+let nameDefault1_2 = getNameDefault1('Вася');
+console.log('nameDefault2', nameDefault1_2);
 function defaultSurname() {
     return 'Smith';
 }
+;
+function getNameDefault2(firstName, lastName = defaultSurname()) {
+    return firstName + ' ' + lastName;
+}
+;
+let nameDefault2 = getNameDefault2('Tom');
+console.log('nameDefault2', nameDefault2);
 var Season;
 (function (Season) {
     Season[Season["Winter"] = 0] = "Winter";
@@ -143,10 +150,28 @@ console.log('strLength2', strLength2);
 let someUnionValue2 = 'hello work';
 strLength2 = someUnionValue2.length;
 console.log('strLength2', strLength2);
+function add(x, y) {
+    return x + y;
+}
+let resultReloadFunc1 = add(5, 4);
+console.log("resultReloadFunc1", resultReloadFunc1);
+let resultReloadFunc2 = add("5", "4");
+console.log("resultReloadFunc2", resultReloadFunc2);
 let userInfo;
 userInfo = ["Tom", 28];
 console.log("userInfo[1]", userInfo[1]);
 userInfo[1] = 37;
+function addNumbersUndef01(firstNumber, ...numberArray) {
+    let result = firstNumber;
+    for (let i = 0; i < numberArray.length; i++) {
+        result += numberArray[i];
+    }
+    return result;
+}
+let num1 = addNumbersUndef01(3, 7, 8);
+console.log(num1);
+let num2 = addNumbersUndef01(3, 7, 8, 9, 4);
+console.log(num2);
 let id;
 id = "1345dgg5";
 console.log('id', id);
